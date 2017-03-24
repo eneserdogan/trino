@@ -32,7 +32,7 @@ trino$: trino [options] <text> <target>
 $ trino
 ```
 ```bash
-trino$: trino <text>
+trino$: trino-dt <text>
 ```
 ```bash
 ✔ Detect: <result>

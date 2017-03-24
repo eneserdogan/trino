@@ -1,5 +1,5 @@
 
-<img src="trino.png" width="200"/> <img src="https://img.shields.io/npm/dt/trino.svg" style="display:inline-block;"> <img src="https://img.shields.io/npm/v/trino.svg"  style="display:inline-block;"> <img   style="display:inline-block;" src="https://img.shields.io/aur/license/yaourt.svg"> <img  style="display:inline-block;" src="https://img.shields.io/badge/cli-trino-blue.svg">
+<a href="https://www.npmjs.com/package/trino"><img src="trino.png" width="200"/></a> <img src="https://img.shields.io/npm/dt/trino.svg" style="display:inline-block;"> <img src="https://img.shields.io/npm/v/trino.svg"  style="display:inline-block;"> <img   style="display:inline-block;" src="https://img.shields.io/aur/license/yaourt.svg"> <img  style="display:inline-block;" src="https://img.shields.io/badge/cli-trino-blue.svg">
 
 > Master your translations with command line !
 

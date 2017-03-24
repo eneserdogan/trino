@@ -1,0 +1,51 @@
+{
+    "name": "trino",
+    "version": "1.0.5",
+    "description": "Translate Command Line Tools",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "bin": {
+        "trino": "./bin/trino.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://eneserdogan@github.com/eneserdogan/trino.git"
+    },
+    "keywords": [
+        "trino",
+        "translate",
+        "cli",
+        "tool",
+        "vorpal",
+        "google cloud",
+        "clipboardy",
+        "ora",
+        "spinner",
+        "shell",
+        "command",
+        "api",
+        "google"
+    ],
+    "author": {
+        "name": "Enes Erdogan",
+        "email": "enes@erdogan.com",
+        "github": "https://github.com/eneserdogan"
+    },
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/eneserdogan/trino/issues"
+    },
+    "homepage": "https://github.com/eneserdogan/trino#readme",
+    "dependencies": {
+        "vorpal": "^1.11.4",
+        "@google-cloud/translate": "^0.7.0",
+        "clipboardy": "^1.0.2",
+        "ora": "^1.1.0"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "mocha": "^3.2.0"
+    }
+}

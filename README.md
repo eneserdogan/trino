@@ -1,9 +1,23 @@
 
-<a href="https://www.npmjs.com/package/trino"><img src="https://raw.githubusercontent.com/eneserdogan/trino/master/trino.png" width="200"/></a> <img src="https://img.shields.io/npm/dt/trino.svg" style="display:inline-block;"> <img src="https://img.shields.io/npm/v/trino.svg"  style="display:inline-block;"> <img   style="display:inline-block;" src="https://img.shields.io/aur/license/yaourt.svg"> <img  style="display:inline-block;" src="https://img.shields.io/badge/cli-trino-blue.svg">
+<p align="center">
+    <a href="https://www.npmjs.com/package/trino">
+        <img src="https://raw.githubusercontent.com/eneserdogan/trino/master/trino.png" width="200" />
+    </a>
+</p>
 
-> Master your translations with command line !
 
-Trino CLI allows a quick and easy translation of words and phrases entered in the command line.
+<p align="center">
+    <img src="https://img.shields.io/npm/dt/trino.svg" style="display:inline-block;"> <img src="https://img.shields.io/npm/v/trino.svg" style="display:inline-block;"> <img style="display:inline-block;" src="https://img.shields.io/aur/license/yaourt.svg"> <img style="display:inline-block;" src="https://img.shields.io/badge/cli-trino-blue.svg">
+</p>
+
+<p align="center">
+    Trino CLI allows a quick and easy translation of words and phrases entered in the command line.
+</p>
+
+<p align="center">
+    <a href="https://asciinema.org/a/6bazzfpv87eqypbo8obq76dar" target="_blank"><img width="80%" src="https://asciinema.org/a/6bazzfpv87eqypbo8obq76dar.png" />
+    </a>
+</p>
 
 ## Getting Started
 
@@ -61,10 +75,12 @@ $ trino
 ##### Command Autocomplete
 ```bash
 trino$: tr[tab][tab]
+trino$: trino  trino-dt
 ```
 ##### Parameters Autocomplete
 ```bash
 trino$: trino  --c[tab][tab]
+trino$: trino  --copy
 ```
 ##### Language Autocomplete
 
@@ -107,6 +123,7 @@ trino$: help
 ```bash
 cd trino
 $ [sudo] yarn install
+$ node index.js
 ```
 #### Unit Test
 ```bash

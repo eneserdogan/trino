@@ -4,6 +4,7 @@ const Vorpal    = require('vorpal')();
 const Translate = require('@google-cloud/translate')({
     key: 'AIzaSyBTx3natq5Zb7BkuSsp2WeJp74Q-6PXFnY'
 });
+const Slugify    = require("slugify");
 const Clipboardy = require('clipboardy');
 const Ora        = require('ora');
 const Spinner    = new Ora({
@@ -15,7 +16,7 @@ let Languages = ['af', 'sq', 'am', 'ar', 'hy', 'az', 'eu', 'be', 'bn', 'bs', 'bg
 Vorpal
     .command('trino <text> <target>')
     .validate(function(args) {
-        if (Languages.indexOf(args.target) == -1 || !args.text) {
+        if (Languages.indexOf(args.target) === -1 || !args.text) {
             Spinner.fail([`Incorrect parameters: <text> => ${args.text} <target> => ${args.target}`]);
             return false;
         } else {
@@ -24,13 +25,14 @@ Vorpal
     })
     .autocomplete(Languages)
     .option('--c, --copy')
+    .option('--s, --slug')
     .action(function(args, callback) {
         Spinner.start();
         Translate.translate(args.text, args.target)
             .then((results) => {
                 const translation = results[0];
                 if (args.options.copy) {
-                    Clipboardy.writeSync(translation);
+                    Clipboardy.writeSync((args.options.slug ? Slugify(translation.toLowerCase()) : translation));
                 }
                 setTimeout(() => {
                     Spinner.succeed([`Translation: ${translation }`]);

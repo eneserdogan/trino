@@ -1,6 +1,6 @@
 {
     "name": "trino",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Translate Command Line Tools",
     "main": "index.js",
     "scripts": {
@@ -21,6 +21,7 @@
         "vorpal",
         "google cloud",
         "clipboardy",
+        "slug",
         "ora",
         "spinner",
         "shell",
@@ -39,10 +40,11 @@
     },
     "homepage": "https://github.com/eneserdogan/trino#readme",
     "dependencies": {
-        "vorpal": "^1.11.4",
         "@google-cloud/translate": "^0.7.0",
         "clipboardy": "^1.0.2",
-        "ora": "^1.1.0"
+        "ora": "^1.1.0",
+        "slugify": "^1.1.0",
+        "vorpal": "^1.11.4"
     },
     "devDependencies": {
         "chai": "^3.5.0",

@@ -61,7 +61,15 @@ trino$: trino --copy "Merhaba" "en"
 ```bash
 ✔ Translation: Hello
 ```
-cmd + v => Hello
+<kbd>command</kbd> || <kbd>control</kbd> + <kbd>v</kbd>  => Hello
+
+Copy the translation `slug` format
+
+```bash
+trino$: trino --copy --slug "Merhaba Dünya" "en"
+```
+<kbd>command</kbd> || <kbd>control</kbd> + <kbd>v</kbd>  => hello-word
+
 
 ## Autocomplete
 
@@ -81,6 +89,10 @@ trino$: trino  trino-dt
 ```bash
 trino$: trino  --c[tab][tab]
 trino$: trino  --copy
+```
+```bash
+trino$: trino  --copy --s[tab][tab]
+trino$: trino  --copy --slug
 ```
 ##### Language Autocomplete
 

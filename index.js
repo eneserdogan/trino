@@ -1,17 +1,20 @@
 "use strict";
 
+const Yaml      = require('js-yaml');
+const Fs        = require('fs');
+const Config    = Yaml.load(Fs.readFileSync("parameters.yml"));
 const Vorpal    = require('vorpal')();
 const Translate = require('@google-cloud/translate')({
-    key: 'AIzaSyBTx3natq5Zb7BkuSsp2WeJp74Q-6PXFnY'
+    key: Config.parameters.api_key
 });
 const Slugify    = require("slugify");
 const Clipboardy = require('clipboardy');
 const Ora        = require('ora');
 const Spinner    = new Ora({
-        text: 'Translation loading',
-        color: 'yellow'
+        text : Config.parameters.spinner_text,
+        color: Config.parameters.spinner_color
     });
-let Languages = ['af', 'sq', 'am', 'ar', 'hy', 'az', 'eu', 'be', 'bn', 'bs', 'bg', 'ca', 'ceb', 'ny', 'zh', 'zh-TW', 'co', 'hr', 'cs', 'da', 'nl', 'en', 'eo', 'et', 'tl', 'fi', 'fr', 'fy', 'gl', 'ka', 'de', 'el', 'gu', 'ht', 'ha', 'haw', 'iw', 'hi', 'hmn', 'hu', 'is', 'ig', 'id', 'ga', 'it', 'ja', 'jw', 'kn', 'kk', 'km', 'ko', 'ku', 'ky', 'lo', 'la', 'lv', 'lt', 'lb', 'mk', 'mg', 'ms', 'ml', 'mt', 'mi', 'mr', 'mn', 'my', 'ne', 'no', 'ps', 'fa', 'pl', 'pt', 'pa', 'ro', 'ru', 'sm', 'gd', 'sr', 'st', 'sn', 'sd', 'si', 'sk', 'sl', 'so', 'es', 'su', 'sw', 'sv', 'tg', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'uz', 'vi', 'cy', 'yi'];
+let Languages = Config.parameters.support_language;
 
 Vorpal
     .command('trino <text> <target>')

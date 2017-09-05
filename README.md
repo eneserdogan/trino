@@ -140,7 +140,7 @@ $ node index.js
 #### Unit Test
 ```bash
 $ npm test
-> trino@1.0.5 test /Users/eneserdogan/Desktop/trino
+> trino@1.0.9 test /Users/eneserdogan/Desktop/trino
 > mocha
 
   Trino Command Line Tools

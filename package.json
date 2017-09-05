@@ -1,6 +1,6 @@
 {
     "name": "trino",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Translate Command Line Tools",
     "main": "index.js",
     "scripts": {
@@ -42,6 +42,7 @@
     "dependencies": {
         "@google-cloud/translate": "^0.7.0",
         "clipboardy": "^1.0.2",
+        "js-yaml": "^3.9.1",
         "ora": "^1.1.0",
         "slugify": "^1.1.0",
         "vorpal": "^1.11.4"

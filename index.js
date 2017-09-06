@@ -1,8 +1,6 @@
 "use strict";
 
-const Yaml      = require('js-yaml');
-const Fs        = require('fs');
-const Config    = Yaml.load(Fs.readFileSync("parameters.yml"));
+const Config    = require('./parameters.json');;
 const Vorpal    = require('vorpal')();
 const Translate = require('@google-cloud/translate')({
     key: Config.parameters.api_key

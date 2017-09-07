@@ -1,6 +1,6 @@
 "use strict";
 
-const Config    = require('./parameters.json');;
+const Config    = require('./parameters.json');
 const Vorpal    = require('vorpal')();
 const Translate = require('@google-cloud/translate')({
     key: Config.parameters.api_key
